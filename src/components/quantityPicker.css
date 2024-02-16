@@ -1,0 +1,37 @@
+.quantity-picker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.quantity-picker button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+}
+
+.quantity-picker button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.quantity-picker label {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.quantity-picker button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}
