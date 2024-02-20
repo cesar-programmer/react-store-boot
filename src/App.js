@@ -4,6 +4,7 @@ import Footer from './components/footer';
 import Catalog from './pages/catalog';
 import Home from './pages/home';
 import About from './pages/about';
+import Admin from './pages/admin';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
@@ -19,6 +20,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/about" element={<About />} />
+        <Route path="/admin" element={<Admin />} />
+
       </Routes>
 
     <Footer />
