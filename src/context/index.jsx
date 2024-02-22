@@ -4,10 +4,13 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     console.log(cart);
-  }, [cart]); // Este efecto se ejecutará cada vez que el carrito cambie
+    totalAmout();
+    console.log(total);
+  }, [cart]);
 
   function addItem(product, quantity) {
     setCart(currentCart => {
@@ -25,13 +28,23 @@ export const CartProvider = ({ children }) => {
     setCart([]);
   }
 
+  function totalAmout() {
+    let total = 0;
+    cart.forEach(item => {
+      total += item.product.price * item.quantity;
+    });
+    setTotal(total);
+    return total;
+  }
 
   return (
     <CartContext.Provider value={{
       cart,
       addItem,
       removeItem,
-      clearCart
+      clearCart,
+      totalAmout,
+      total
     }}>
       {children}
     </CartContext.Provider>
