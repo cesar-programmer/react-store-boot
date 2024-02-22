@@ -21,7 +21,7 @@ export default function Catalog() {
 
   return (
     <div className="catalog">
-      <h1>Hey look my awesome {products.length} products</h1>
+      <h1>Look my awesome {products.length} products</h1>
       {products.map((prod) => {
         return <Products product={prod} key={prod.id} />
       })}

@@ -5,16 +5,22 @@
   justify-content: center;
   height: 100vh;
   background-color: #f5f5f5;
+
 }
 
 .home h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
+}
+
+.home h2 {
+  margin-top: 0px;
 }
 
 .home-img {
   width: 100%;
   max-width: 400px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 40px;
 }
