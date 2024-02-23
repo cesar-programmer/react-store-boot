@@ -19,8 +19,9 @@ export default function ShoppingCar() {
                 <div>Your cart is empty.</div>
               ) : (
                 cart.map((item) => (
-                  <div key={item.id} className="cart-item">
+                  <div key={item.id} className="cart-item" id='cart-item2'>
                     <div>{item.product.title}</div>
+                    <img src={item.product.image} alt={item.product.title}  className='itemImage'/>
                     <div>
                       {item.quantity} x ${item.product.price}
                     </div>
@@ -31,7 +32,9 @@ export default function ShoppingCar() {
           <div className="modal-footer">
             <div>Total: ${context.total}</div>
             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
-            <button type="button" className="btn btn-primary">Checkout</button>
+            <button type="button" className="btn btn-primary" onClick={() => {
+              context.clearCart();
+            }}>Checkout</button>
           </div>
         </div>
       </div>

@@ -1,8 +1,13 @@
 import './navbar.css'; // Asegúrate de personalizar este archivo CSS para tus necesidades
 import { Link } from 'react-router-dom';
 import ShoppingCar from './shoppingCar';
+import { useContext } from 'react';
+import CartContext from '../context';
 
 export default function Navbar() {
+
+  const context = useContext(CartContext);
+  const cart = context.cart;
   return (
     <nav className="navbar navbar-expand-lg navbar-dark  bg-dark">
       <div className="container-fluid">
@@ -34,7 +39,7 @@ export default function Navbar() {
           >
           <ShoppingCar />
           </i>
-          <span className="badge bg-primary">0</span>
+          <span className="badge bg-primary">{cart.length}</span>
         </div>
       </div>
     </nav>

@@ -1,3 +1,29 @@
 .modal-dialog{
   color: black;
 }
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-item > div,
+.cart-item > img {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.itemImage {
+  height: 75px;
+  object-fit: cover;
+  margin-right: 100px;
+  margin-left: 100px;
+  align-items: center;
+}

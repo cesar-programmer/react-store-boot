@@ -1,7 +1,9 @@
 import './admin.css';
 import { useState } from 'react';
+import DataService from '../services/dataService';
 
 export default function Admin() {
+  const service = new DataService();
   const [product, setProduct] = useState({ title: '', category: '', price: '', image: '' });
 
   function handleInputChange(event) {
@@ -12,6 +14,7 @@ export default function Admin() {
   function saveProduct(event) {
     event.preventDefault();
     console.log(product);
+    service.addProduct(product);
     clearForm();
   }
 
@@ -33,7 +36,7 @@ export default function Admin() {
         </div>
         <div className="mb-3">
           <label htmlFor="price" className="form-label">Price</label>
-          <input type="text" className="form-control" id="price" name="price" value={product.price} onChange={handleInputChange}/>
+          <input type="number" className="form-control" id="price" name="price" value={product.price} onChange={handleInputChange}/>
         </div>
         <div className="mb-3">
           <label htmlFor="image" className="form-label">Image URL</label>

@@ -13,6 +13,16 @@ export const CartProvider = ({ children }) => {
   }, [cart]);
 
   function addItem(product, quantity) {
+    if(cart.find(item => item.product.title === product.title)) {
+      let tempCart = cart.map(item => {
+        if(item.product.title === product.title) {
+          item.quantity += quantity;
+        }
+        return item;
+      });
+      setCart(tempCart);
+      return;
+    }
     setCart(currentCart => {
       const item = { product, quantity };
       return [...currentCart, item];
@@ -25,7 +35,9 @@ export const CartProvider = ({ children }) => {
   }
 
   function clearCart() {
+    if(cart.length === 0) return;
     setCart([]);
+    alert('Thank you for your purchase!');
   }
 
   function totalAmout() {

@@ -25,7 +25,7 @@ export default function Products({ product }) {
         <h4 className='total-amount'>${(quantity * product.price).toFixed(2)}</h4>
       </div>
       <p className='category'>{product.category}</p>
-      <QuantityPicker onQuantityChange={onQuantityChange}/>
+      <QuantityPicker quantity={quantity} onQuantityChange={onQuantityChange}/>
       <button className='btn btn-outline-secondary btn-sm button-add' onClick={() => {
         context.addItem(product, quantity);
         setQuantity(1);

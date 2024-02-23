@@ -57,6 +57,9 @@ class DataService {
   getProducts() {
     return catalog;
   }
+  addProduct(product) {
+    catalog.push(product);
+  }
 }
 
 export default DataService;
