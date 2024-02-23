@@ -3,8 +3,8 @@ import { useState } from 'react';
 import DataService from '../services/dataService';
 
 export default function Admin() {
-  const service = new DataService();
-  const [product, setProduct] = useState({ title: '', category: '', price: '', image: '' });
+  const service = DataService.getInstance();
+  const [product, setProduct] = useState({ title: '', category: '',price:'' , image: '' });
 
   function handleInputChange(event) {
     const { name, value } = event.target;
@@ -14,6 +14,7 @@ export default function Admin() {
   function saveProduct(event) {
     event.preventDefault();
     console.log(product);
+    product.price = Number(product.price);
     service.addProduct(product);
     clearForm();
   }

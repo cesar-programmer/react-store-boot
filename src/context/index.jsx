@@ -30,7 +30,10 @@ export const CartProvider = ({ children }) => {
   }
 
   function removeItem(product) {
-    let tempCart = cart.filter(item => item.product.id !== product.id);
+    console.log('removeItem', product.product.title);
+    let tempCart = cart.filter(item => item.product.title !== product.product.title);
+    totalAmout();
+    console.log('tempCart', tempCart);
     setCart(tempCart);
   }
 

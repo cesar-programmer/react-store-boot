@@ -12,8 +12,8 @@ export default function Catalog() {
   }, [])
 
   function loadProducts() {
-    let service = new DataService()
-    let products = service.getProducts()
+    const service = DataService.getInstance();
+    const products = service.getProducts()
     setProducts(products)
 
   }

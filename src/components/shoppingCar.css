@@ -13,17 +13,20 @@
 .cart-item > img {
   flex: 1;
   text-align: center;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center
 }
 
 
 
 .itemImage {
-  height: 75px;
+  height: 55px;
   object-fit: cover;
   margin-right: 100px;
   margin-left: 100px;
   align-items: center;
+}
+
+#removeBtn {
+  margin-left: 5px;
 }

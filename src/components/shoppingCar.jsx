@@ -25,6 +25,14 @@ export default function ShoppingCar() {
                     <div>
                       {item.quantity} x ${item.product.price}
                     </div>
+                    <div>
+                      <button type="button" className="btn-sm btn-danger" id='removeBtn'
+
+                        onClick={() => {
+                        context.removeItem(item);
+                      }}>Remove
+                      </button>
+                    </div>
                   </div>
                 ))
               )}
