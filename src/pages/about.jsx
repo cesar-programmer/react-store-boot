@@ -8,7 +8,7 @@ export default function About() {
         <div className="row">
           <div className="col-12 col-md-6">
             <h1>About Organika</h1>
-            <p>Organika is dedicated to bringing you the best organic products for your health and wellness. Founded in [año], our mission is to support sustainable farming and to make organic living accessible to everyone.</p>
+            <p>Organika is dedicated to bringing you the best organic products for your health and wellness. Founded in 2024, our mission is to support sustainable farming and to make organic living accessible to everyone.</p>
             <p>Discover the story behind our passion for organic products and learn how we're making a difference.</p>
             <div className="contact-info">
               <p><i className="bi bi-envelope-fill"></i> email@example.com</p>
